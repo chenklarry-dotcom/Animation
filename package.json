@@ -1,0 +1,16 @@
+{
+  "name": "how-to-drink-bottled-water",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A 26-second 9:16 motion graphic: how to drink bottled water. Code-driven, rendered to MP4.",
+  "scripts": {
+    "preview": "node render/serve.mjs",
+    "audio": "node render/audio.mjs && node render/audio.mjs --no-music",
+    "render": "node render/render.mjs --audio out/soundtrack.wav --out video/how-to-drink-bottled-water.mp4",
+    "build": "npm run audio && npm run render"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.0"
+  },
+  "license": "MIT"
+}

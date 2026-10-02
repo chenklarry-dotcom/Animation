@@ -1,0 +1,7 @@
+/* Self-hosted fonts (SIL Open Font License — see OFL-*.txt) */
+@font-face { font-family: 'Unbounded'; font-weight: 600; font-display: block; src: url('unbounded-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Unbounded'; font-weight: 800; font-display: block; src: url('unbounded-latin-800-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Unbounded'; font-weight: 900; font-display: block; src: url('unbounded-latin-900-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-weight: 600; font-display: block; src: url('inter-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-weight: 500; font-display: block; src: url('jetbrains-mono-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-weight: 700; font-display: block; src: url('jetbrains-mono-latin-700-normal.woff2') format('woff2'); }

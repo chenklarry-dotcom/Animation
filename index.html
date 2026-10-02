@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Drink Bottled Water</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+  :root { color-scheme: dark; --bg: #040a18; --fg: #eaf4ff; --muted: #8796ba; --line: #1b2a4d; --accent: #3cd3ff; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--fg); font-family: Inter, system-ui, sans-serif; }
+  body { display: grid; place-items: center; min-height: 100vh; }
+  .wrap { display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 16px; width: 100%; }
+  .screen { position: relative; height: min(82vh, calc((100vw - 32px) * 16 / 9)); aspect-ratio: 9 / 16; border-radius: 22px;
+            overflow: hidden; background: #071a3d; box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55), 0 0 0 1px var(--line); }
+  .screen canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  #stagegl { visibility: hidden; }
+  .bar { display: flex; align-items: center; gap: 10px; width: min(100%, calc(min(82vh, calc((100vw - 32px) * 16 / 9)) * 9 / 16)); }
+  button { font: 600 14px Inter, system-ui, sans-serif; color: var(--fg); background: #0f1d3b; border: 1px solid var(--line);
+           border-radius: 999px; padding: 8px 14px; cursor: pointer; min-width: 64px; }
+  button:hover { border-color: var(--accent); }
+  input[type=range] { flex: 1; accent-color: var(--accent); min-width: 0; }
+  #time { font: 500 13px "JetBrains Mono", ui-monospace, monospace; color: var(--muted); min-width: 58px; text-align: right; }
+  body.render { display: block; min-height: 0; background: #000; }
+  body.render .wrap { padding: 0; gap: 0; align-items: flex-start; }
+  body.render .bar { display: none; }
+  body.render .screen { width: 1080px; height: 1920px; border-radius: 0; box-shadow: none; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="screen" role="img" aria-label="Animation: how to drink bottled water">
+    <canvas id="stage" width="1080" height="1920"></canvas>
+    <canvas id="stagegl" width="1080" height="1920"></canvas>
+  </div>
+  <div class="bar">
+    <button id="play" aria-pressed="false">Play</button>
+    <input id="scrub" type="range" min="0" max="26" step="0.001" value="0" aria-label="Timeline">
+    <span id="time">00.00s</span>
+    <button id="mute">Sound off</button>
+  </div>
+</main>
+<script src="src/timeline.js"></script>
+<script src="src/core.js"></script>
+<script src="src/bottle.js"></script>
+<script src="src/characters.js"></script>
+<script src="src/fx.js"></script>
+<script src="src/scenes.js"></script>
+<script src="src/post.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>
